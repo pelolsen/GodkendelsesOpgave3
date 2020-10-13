@@ -16,4 +16,4 @@ Step by step guide for installation of LP on MAC
 
 7. LP will now open, and you can choose the language of which you want LP to operate and start working.
 
-Hej hej hej
+Hej Steffan 
