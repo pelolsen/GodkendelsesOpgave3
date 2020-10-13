@@ -15,3 +15,5 @@ Step by step guide for installation of LP on MAC
 6.2. This link shows how to make sure the security settings are correct -  https://support.apple.com/en-us/HT202491
 
 7. LP will now open, and you can choose the language of which you want LP to operate and start working.
+
+Hej hej hej
