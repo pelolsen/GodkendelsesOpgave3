@@ -1,5 +1,5 @@
 class User {
-    constructor(username, password, firstname, lastname, email, birthday, gender){
+    constructor(username, password, firstname, lastname, email, birthday, gender, interest){
         this.username = username;
         this.password = password;
         this.firstname = firstname;
@@ -7,6 +7,7 @@ class User {
         this.email = email;
         this.birthday = birthday;
         this.gender = gender;
+        this.interest = interest
     }
     getAge() {
         var birthDate = new Date(this.birthday);
@@ -15,17 +16,11 @@ class User {
         
         return Math.abs(age_dt.getUTCFullYear() - 1970);
     }
-
-
-    confirm1() {
-        let message = "Hello " + this.firstname + "! " + "You are now registered as " + this.username;
-        return message;
-    }
 }
 
 class PaymentUser extends User {
-    constructor(username, password, firstname, lastname, email, birthday, gender, credicardNumber, creditcardExpires, ccv){
-        super(username, password, firstname, lastname, email, birthday, gender);
+    constructor(username, password, firstname, lastname, email, birthday, gender, interest, credicardNumber, creditcardExpires, ccv){
+        super(username, password, firstname, lastname, email, birthday, gender, interest);
         this.credicardNumber = credicardNumber;
         this.creditcardExpires = creditcardExpires;
         this.ccv = ccv;
@@ -45,24 +40,15 @@ class PaymentUser extends User {
             return cardname;
         }
     }
-    confirm2(){
-        let message = this.username + ", your " + this.cardagency() + " card is registered and saved!";
-        return message;
-    }
 
     
 }
 
 class FreeUser extends User {
-    constructor(username, password, firstname, lastname, email, birthday, gender){
-        super(username, password, firstname, lastname, email, birthday, gender);
+    constructor(username, password, firstname, lastname, email, birthday, gender, interest){
+        super(username, password, firstname, lastname, email, birthday, gender, interest);
     }
-    confirm3(){
-        let message = this.username + ", enjoy your free session!";
-    }
-    
 }
+UserTypeArray = [User, PaymentUser, FreeUser];
 
-module.exports = User;
-module.exports = PaymentUser;
-module.exports = FreeUser;
+module.exports= UserTypeArray;
