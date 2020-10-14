@@ -1,5 +1,15 @@
-var express = require('express')
+const express = require('express')
 const cors = require('cors')
-  var app = express(),
-  port = process.env.PORT || 3000;
-  var i = 0
+const server = express()
+const port = 3000
+
+const Users = require("./HardcodedUsers")
+server.get('/', function(req,res){
+  res.json({
+    Age: Users[0].getAge()
+  })
+})
+
+server.listen(port, () => {
+  console.log(`Server-applikation lytter på http://localhost:${port}`)
+})
