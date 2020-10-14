@@ -6,7 +6,7 @@ function interestMatch(){
       for (let j = i+1; j < users.length; j++) {
         const user2 = users[j];
         if (user1.interest === user2.interest) {
-          return `${user1.username} matches with ${user2.username}`;
+          return `${user1.username} is a match with ${user2.username}. Shared interrest: ${user1.interest}`;
         }
       }
     }

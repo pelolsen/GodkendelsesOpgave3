@@ -1,3 +1,4 @@
-let InterrestArray = ["Netflix", "Sports", "Party", "Business", "Children", "Hygge"]
+let InterrestArray = []
+InterrestArray = ["Netflix", "Sports", "Party", "Business", "Children", "Hygge"];
 
-module.export = InterrestArray
+module.exports = InterrestArray;
