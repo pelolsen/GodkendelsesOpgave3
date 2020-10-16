@@ -1,3 +1,4 @@
+// User picture
 class Image {
     constructor(type, size, owner){
         this.type = type

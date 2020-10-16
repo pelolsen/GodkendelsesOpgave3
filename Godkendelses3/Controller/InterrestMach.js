@@ -1,5 +1,5 @@
 const users = require("../HardcodedUsers")
-
+// this function looks at all the users and return the users that have shared interrest.
 function interestMatch(){
     for (let i = 0; i < users.length; i++) {
       const user1 = users[i];

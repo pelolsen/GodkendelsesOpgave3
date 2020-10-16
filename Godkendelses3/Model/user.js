@@ -1,3 +1,4 @@
+//Here I create my User class wich is parent to the two other user classes
 class User {
     constructor(username, password, firstname, lastname, email, birthday, gender, interest){
         this.username = username;
@@ -9,6 +10,7 @@ class User {
         this.gender = gender;
         this.interest = interest
     }
+    // This function is used to determine the age of the User
     getAge() {
         var birthDate = new Date(this.birthday);
         var diff_ms = Date.now() - birthDate;
@@ -17,7 +19,7 @@ class User {
         return Math.abs(age_dt.getUTCFullYear() - 1970);
     }
 }
-
+// PaymentUsers need to have creditcard information
 class PaymentUser extends User {
     constructor(username, password, firstname, lastname, email, birthday, gender, interest, credicardNumber, creditcardExpires, ccv){
         super(username, password, firstname, lastname, email, birthday, gender, interest);
@@ -43,12 +45,13 @@ class PaymentUser extends User {
 
     
 }
-
+//FreeUsers do not need creditcard so they are just normal users
 class FreeUser extends User {
     constructor(username, password, firstname, lastname, email, birthday, gender, interest){
         super(username, password, firstname, lastname, email, birthday, gender, interest);
     }
 }
+// I put my users into an array so I can export all of them
 UserTypeArray = [User, PaymentUser, FreeUser];
 
 module.exports= UserTypeArray;
