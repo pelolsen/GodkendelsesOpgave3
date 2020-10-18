@@ -1,7 +1,7 @@
 const UserTypeArray = require('./Model/user')
 const PaymentUser = UserTypeArray[1]
 const FreeUser = UserTypeArray[2]
-const InterrestArray =require('./Model/Interrest')
+const InterrestArray =require('./Model/Interest')
 
 
 let userArray = []

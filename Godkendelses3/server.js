@@ -1,13 +1,15 @@
 const express = require('express')
 const cors = require('cors') //if bugging on chrome
 const server = express()
+server.use(cors())
+
 const port = 3000 //define localhost port
 // require all the functions and classes I'll need
 const Users = require("./HardcodedUsers")
 const Images = require("./HardcodedImages")
 const InterrestMach = require('./Controller/InterrestMach')
 const imageCheck = require('./Controller/imageTypeController')
-const InterrestArray = require('./Model/Interrest')
+const InterrestArray = require('./Model/Interest')
 const createUser = require('./Controller/CreateUser')
 const delUser = require('./Controller/DeleteUser')
 
